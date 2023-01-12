@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/allUser/AllUser.css">
+    <link rel="stylesheet" href="/styles/globalStyle.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <title>Kenzie Empresas</title>
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.png" alt="Logo Kenzie Empresas">
+
+        <button class="btn--logout">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container--User">
+            <div class="container--User_name">
+                <h1 id="name-User"></h1>
+                <div class="container--User_information">
+                    <h2 id="email-User"></h2>
+                    <span id="professional_level-user"></span>
+                    <p id="type-job"></p>
+                </div>
+            </div>
+            <button class="btn--edit"></button>
+        </div>
+
+
+
+        <div class="container--companyName">
+            <h3 id="text"></h3>
+            <ul class="cards--Company">
+
+            </ul>
+        </div>
+
+
+        <dialog>
+            <div>
+                <button class="btn-close">X</button>
+             
+                <h4>Editar Perfil</h4>
+                    <form>
+                        <input type="text" name="username" id="username" placeholder="Seu nome">
+                        <input type="email" name="email" id="email" placeholder="Seu e-mail">
+                        <input type="password" name="password" id="password" placeholder="Sua senha">
+        
+                        <button type="submit" class="btn--edit__modal">Editar perfil</button>
+                    </form>
+            </div>
+        </dialog>
+
+
+    </main>
+
+    <script type="module" src="./allUser.js"></script>
+</body>
+</html>

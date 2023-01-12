@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/globalStyle.css">
+    <link rel="stylesheet" href="./userAdmin.css">
+    <link rel="stylesheet" href="./modalOpenDepart.css">
+    <link rel="stylesheet" href="/styles/toats.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" 
+    type="text/css" 
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <title>Kenzie Empresas</title>
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.png" alt="Logo Kenzie Empresas">
+
+        <button class="btn--logout">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="departament">
+            <div class="container--departament_filter">
+                <h1>Departamentos</h1>
+    
+                <select name="allDepartment" id="allDepartment">
+                    <option disabled selected hidden>Selecionar Empresa</option>
+                </select>
+        
+                <button class="btn--create">+ Criar</button>
+
+            </div>
+
+            <div class="cards--departament">
+                <ul class="cards--departament_list">
+
+            </ul>
+        </div>
+        </div>
+
+        <div class="users">
+            <h2>Usuários cadastrados</h2>
+            <ul class="cards--users">
+
+            </ul>
+        </div>
+
+        <dialog class="openDepart">
+            <button class="btn--close__depart">X</button>
+            <h4 class="nameDepart">Nome do departamento</h4>
+            <div>
+            <div class="dialog--container">
+                <div class="container--information">
+                    <span>Descrição do departamento</span>
+                    <p>Empresa pertencente</p>
+                </div>
+                <div class="container--hire">
+                    <select name="allUsersList" id="allUsersList">
+                        <option disabled selected hidden>Selecionar Usuário</option>
+                    </select>
+                    <button class="btn--hire">Contratar</button>
+                </div>
+            </div>
+                <ul class="allUsers">
+
+                </ul>
+            </div>
+        </dialog>
+
+        <dialog class="createDepart">
+            <div class="container--modal__create">
+                <button class="btn-closeModalCreateDepart">X</button>
+                <span>Criar Departamento</span>
+                <form class="form--create__Depart">
+                    <input type="text" name="name" id="name" placeholder="Nome do departamento">
+                    <input type="text" name="description" id="description" placeholder="Descrição">
+                    <select name="company_uuid" id="company_uuid">
+                        <option disabled selected hidden>Selecionar Empresas</option>
+    
+                    </select>
+                    <button type="submit" class="btn--createDepart">Criar o departamento</button>
+                </form>
+            </div>
+
+        </dialog>
+
+        <dialog class="edit--Depart">
+            <div class="container--modal__create">
+                <button class="btn-close__edit">X</button>
+                <span>Editar Departamento</span>
+                <form class="form--create__Edit">
+
+                    <input type="text" name="description" id="description" placeholder="Descrição">
+                    <button type="submit" class="btn--editDepart">Salvar alterações</button>
+                </form>
+
+        </dialog>
+
+        <dialog class="delete--Depart">
+            <div class="container--modalDelete">
+                <button class="btn--closeModalDelete">X</button>
+                <span>Realmente deseja deletar o Departamento e demitir seus funcionários?</span>
+                <button class="btn--deleteDepart">Confirmar</button>
+            </div>
+
+        </dialog>
+
+        <dialog class="edit--User">
+            <div class="container--EditUser">
+                <button class="btn--closeModalEdit">X</button>
+                <span>Editar Usuário</span>
+                <form class="form--Edit">
+                    <select name="kind_of_work" id="kind_of_work">
+                        <option disabled selected hidden>Selecionar modalidade de trabalho</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="home office">Home-Office</option>
+                        <option value="hibrido">Hibrido</option>
+
+                    </select>
+
+                    <select name="professional_level" id="professional_level">
+                        <option disabled selected hidden>Selecionar nivel profissional</option>
+                        <option value="estágio">Estágio</option>
+                        <option value="júnior">Júnior</option> 
+                        <option value="pleno">Pleno</option>
+                        <option value="sênior">Sênior</option>
+                    </select>
+
+                    <button type="submit" class="btn-EditUserModal">Editar</button>
+                </form>
+            </div>
+
+        </dialog>
+
+        <dialog class="delete--User">
+            <div class="container--modalDeleteUser">
+                <button class="btn--closeModalDeleteUser">X</button>
+                <span>Realmente deseja remover o usuário?</span>
+                <button class="btn--deleteUser">Confirmar</button>
+            </div>
+
+        </dialog>
+
+    </main>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script type="module" src="./UserAdmin.js"></script>
+
+</body>
+</html>

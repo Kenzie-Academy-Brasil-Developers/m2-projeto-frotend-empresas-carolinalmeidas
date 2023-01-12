@@ -1,0 +1,402 @@
+
+.openDepart::backdrop{
+    background-color: rgba(70, 35, 167, 0.13);
+}
+.openDepart{
+    border: none;
+
+    width: 500px;
+    height: 400px;
+
+    top: 100px;
+    margin: 0 auto;
+    padding: 20px 20px;
+
+}
+.btn--close__depart{
+    position: relative;
+    left: 450px;
+
+    border: none;
+    background-color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+.nameDepart{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+.dialog--container{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.container--information{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+.container--information > span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+.container--information > p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+.container--hire{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+}
+#allUsersList{
+    box-sizing: border-box;
+    width: 200px;
+    height: 52px;
+
+    background: var(--color-grey-1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.btn--hire{
+    border: none;
+
+    width: 130px;
+    height: 30px;
+    background: var(--color-green-1);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+.openDepart > div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.allUsers{
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    gap: 20px;
+
+    overflow: auto;
+}
+.allUsers > li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px 10px;
+    
+    width: 306px;
+    height: 120px;
+
+    border-bottom: 1px solid #4200FF;
+
+
+}
+.allUsers > li > span{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+.allUsers > li > p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+.btn--off{
+    background-color: var(--color-grey-1);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: var(--color-red-1);
+    width: 100px;
+
+    border: 1px solid var(--color-red-1);
+
+    cursor: pointer;
+
+}
+
+
+.createDepart{
+    border: none;
+    top: 100px;
+    margin: 0 auto;
+    
+
+}
+.container--modal__create{
+
+    width: 400px;
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 10px 10px;
+    gap: 10px;
+    
+}
+.container--modal__create > button{
+    position: relative;
+    left: 180px;
+
+    border: none;
+    background-color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+.container--modal__create> span{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+.container--modal__create> form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.container--modal__create> form > input{
+    width: 350px;
+    height: 52px;
+
+    background: var(--color-grey-1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.container--modal__create> form > select{
+    width: 350px;
+    height: 52px;
+    background: var(--color-grey-1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.container--modal__create> form > button{
+    width: 350px;
+    height: 52px;
+
+    border: none;
+    background-color: var(--color-blue-1);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+
+    text-align: center;
+
+    color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+
+.delete--Depart{
+    border: none;
+    top: 100px;
+    margin: 0 auto;
+    
+}
+.container--modalDelete{
+
+    width: 400px;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+    padding: 20px 20px;
+}
+.container--modalDelete > span{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+}
+.btn--closeModalDelete{
+    position: relative;
+    left: 150px;
+
+    border: none;
+    background-color: var(--color-grey-1);
+
+    cursor: pointer;
+
+}
+.btn--deleteDepart{
+
+    border: none;
+
+    width: 200px;
+    height: 55px;
+
+    background-color: var(--color-green-1);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+
+    color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+
+
+.delete--User{
+    border: none;
+    top: 100px;
+    margin: 0 auto;
+}
+.container--modalDeleteUser{
+    width: 400px;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+
+    padding: 20px 20px;
+}
+.btn--closeModalDeleteUser{
+    position: relative;
+    left: 150px;
+
+    border: none;
+    background-color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+.container--modalDeleteUser > span{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+}
+.btn--deleteUser{
+    border: none;
+
+    width: 200px;
+    height: 55px;
+
+    background-color: var(--color-green-1);
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+
+    color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+
+
+.edit--User{
+    border: none;
+    top: 100px;
+    margin: 0 auto;
+}
+.container--EditUser{
+    width: 400px;
+    height: 320px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 20px 20px;
+}
+.btn--closeModalEdit{
+    position: relative;
+    left: 350px;
+
+    border: none;
+    background-color: var(--color-grey-1);
+
+    cursor: pointer;
+}
+.container--EditUser > span{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+}
+.form--Edit{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+.form--Edit > select{
+    width: 350px;
+    height: 52px;
+    
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+
+    color: rgba(0, 0, 0, 0.5);
+}
+.btn-EditUserModal{
+    width: 350px;
+    height: 52px;
+
+
+    background-color: var(--color-blue-1);
+    border: none;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+
+    color: var(--color-grey-1);
+
+    cursor: pointer;
+}

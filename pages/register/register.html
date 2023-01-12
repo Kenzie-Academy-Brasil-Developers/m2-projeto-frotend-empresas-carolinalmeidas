@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/globalStyle.css">
+    <link rel="stylesheet" href="/pages/register/register.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" 
+    type="text/css" 
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+    
+    <title>Kenzie Empresas</title>
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.png" alt="Logo Kenzie Empresas">
+        <button class="btn-mobile"></button>
+        
+        <div class="container--btn__desktop button">
+            <button class="container--btn_login">Login</button>
+            <button class="container--btn_home">Home</button>
+        </div>
+
+        <dialog>
+            <div class="container--btn">
+            <button class="container--btn_login">Login</button>
+            <button class="container--btn_home">Home</button>
+            </div>
+        </dialog>
+    </header>
+
+
+    <main>
+        <img src="/assets/img.png" alt="">
+
+        <div class="main--container_form">
+            <h1>Cadastre-se</h1>
+
+            <form>
+                <input type="text" id="username" name="username" placeholder="Seu nome">
+    
+                <input type="email" id="email" name="email" placeholder="Seu e-mail">
+        
+                <input type="password" id="password" name="password" placeholder="Sua senha">
+    
+                <select name="professional_level" id="professional_level">
+                    <option disabled selected hidden>Nivel profissional</option>
+                    <option value="Estágio">Estágio</option>
+                    <option value="Júnior">Júnior</option> 
+                    <option value="Pleno">Pleno</option>
+                    <option value="Sênior">Sênior</option>
+                </select>
+                <button type="submit" class="btn--createUser">Cadastra-se</button>
+               
+                <button class="btn--retorn">Retornar</button>
+            </form>
+        </div>
+
+
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script type="module" src="../register/register.js"></script>
+    
+</body>
+</html>

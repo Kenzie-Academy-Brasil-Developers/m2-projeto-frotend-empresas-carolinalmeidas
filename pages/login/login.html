@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/login/login.css">
+    <link rel="stylesheet" href="/styles/globalStyle.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" 
+    type="text/css" 
+    href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <title>Kenzie Empresas</title>
+
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.png" alt="Logo Kenzie Empresas">
+        <button class="btn-mobile"></button>
+        
+        <div class="container--btn__desktop button">
+            <button class="container--btn_home">Home</button>
+            <button class="container--btn_register">Cadastro</button>
+        </div>
+
+        <dialog>
+            <div class="container--btn">
+            <button class="container--btn_home">Home</button>
+            <button class="container--btn_register">Cadastro</button>
+            </div>
+        </dialog>
+    </header>
+
+    <main>
+        <img src="/assets/img.png" alt="">
+
+        <div class="main--container_form">
+            <h1>Login</h1>
+            <p>Preencha os campos para realizar login </p>
+            <form>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail">
+    
+                <input type="password" id="password" name="password" placeholder="Sua Senha">
+
+                <button class="btn--login">Login</button>
+            </form>
+
+            <span>ou</span>
+            <button class="btn--register">Cadastre-se</button>
+            
+        </div>
+
+
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script type="module" src="./login.js"></script>
+
+</body>
+</html>

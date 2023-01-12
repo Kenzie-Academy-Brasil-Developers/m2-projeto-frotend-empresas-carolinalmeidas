@@ -1,0 +1,49 @@
+.cards--company > li{
+    display: flex;
+    flex-direction: column;
+    
+
+    padding: 10px 10px;
+}
+
+.cards--company > li > h1{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: var(--color-black-1);
+}
+.cards--company > li > span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: var(--color-black-1);
+}
+
+.cards--company > li > p{
+    
+    width: 100%;
+    max-width: 120px;
+    text-align: center;
+    
+    border: 1px solid #4200FF;
+    border-radius: 255px; 
+     
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #4200FF;
+}
+
+
+
+
+
+
+
+
