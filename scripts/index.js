@@ -2,7 +2,7 @@ const baseUrl = "http://localhost:6278"
 
 import { sectors, allCompany } from "./request.js";
 
-const list = await allCompany()
+
 
 function modalButtons(){
     const button = document.querySelector(".btn-mobile")
@@ -62,6 +62,8 @@ async function allSectors(){
 allSectors()
 
 async function filter(){
+    const list = await allCompany()
+    cardsCompany(list)
     const select = document.querySelectorAll("#company")
     select.forEach((option) => {
      
@@ -103,7 +105,7 @@ function cardsCompany(array){
     })
 
 }
-cardsCompany(list)
+
 
 function cardsCompanyFilter(element){
     const ul = document.querySelector(".cards--company")
