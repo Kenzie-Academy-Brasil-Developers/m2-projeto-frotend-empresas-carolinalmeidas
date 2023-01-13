@@ -33,9 +33,7 @@ async function company(){
 company()
 
 async function filterDepartament(){
-  
-   
-    
+
 }
 filterDepartament()
 

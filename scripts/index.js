@@ -1,6 +1,6 @@
 const baseUrl = "http://localhost:6278"
 
-import { sectors, allCompany } from "../scripts/request.js";
+import { sectors, allCompany } from "./request.js";
 
 const list = await allCompany()
 
