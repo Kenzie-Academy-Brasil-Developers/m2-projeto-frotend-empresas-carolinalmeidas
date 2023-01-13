@@ -1,38 +1,8 @@
 const baseUrl = "http://localhost:6278"
-async function listCompany(){
-    const allCompany = await fetch("http://localhost:6278/companies", {
-        "method": "GET",
-        "headers": {
-          "Authorization": "application/json"
-        }
-      })
-    .then(response => response.json())
-    .then(response => {
-        const company = response
-        cardsCompany(company)
-    })
-    .catch(err => console.error(err));
 
-    return allCompany
-}
-listCompany()
+import { sectors, allCompany } from "../scripts/request.js";
 
-async function cardsCompany(array){
-    
-    const ul = document.querySelector(".cards--company")
-    array.forEach((element) => {
-        ul.insertAdjacentHTML("beforeend", 
-        `
-            <li>
-                <h1>${element.name}</h1>
-                <span>${element.opening_hours}</span>
-                <p>${element.sectors.description}</p>
-            </li>
-        `)
-    })
-
-}
-
+const list = await allCompany()
 
 function modalButtons(){
     const button = document.querySelector(".btn-mobile")
@@ -51,7 +21,6 @@ function modalButtons(){
 
 
 }
-
 modalButtons()
 
 function openPages(){
@@ -77,3 +46,76 @@ function openPages(){
     })
 }
 openPages()
+
+async function allSectors(){
+    const sector = await sectors()
+    const select = document.querySelector("#company")
+
+    sector.forEach((sect) => {
+            select.insertAdjacentHTML("beforeend", 
+            `
+                <option id=${sect.uuid}>${sect.description}</option>
+            `)
+    })
+
+}
+allSectors()
+
+async function filter(){
+    const select = document.querySelectorAll("#company")
+    select.forEach((option) => {
+     
+        option.addEventListener("click", () => {
+            const ul = document.querySelector(".cards--company")
+            ul.innerHTML = ""
+            list.forEach((elem) => {
+
+
+                const id = option.options[option.selectedIndex].id
+                
+                if(id == ""){
+                    cardsCompanyFilter(elem)
+                }else if(id == elem.sectors.uuid){
+
+                    cardsCompanyFilter(elem)
+                }   
+            })
+            
+        })
+        
+    })
+    
+
+}
+filter()
+
+function cardsCompany(array){
+    const ul = document.querySelector(".cards--company")
+    array.forEach((element) => {
+        ul.insertAdjacentHTML("beforeend", 
+        `
+            <li>
+                <h1>${element.name}</h1>
+                <span>${element.opening_hours}</span>
+                <p>${element.sectors.description}</p>
+            </li>
+        `)
+    })
+
+}
+cardsCompany(list)
+
+function cardsCompanyFilter(element){
+    const ul = document.querySelector(".cards--company")
+
+        ul.insertAdjacentHTML("beforeend", 
+        `
+            <li>
+                <h1>${element.name}</h1>
+                <span>${element.opening_hours}</span>
+                <p>${element.sectors.description}</p>
+            </li>
+        `)
+
+
+}

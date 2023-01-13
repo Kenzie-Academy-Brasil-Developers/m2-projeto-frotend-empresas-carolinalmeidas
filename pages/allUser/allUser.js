@@ -109,15 +109,18 @@ function editUser(){
     }
     )
 
-    form.addEventListener("submit", async () => {
-       
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault()
         const body = {}
         elements.forEach((element) => {
-            if(element.tagName == "INPUT"){
+            if(element.tagName == "INPUT" || element.tagName == ""){
                 body[element.id] = element.value
             }
         })
         await edit(token, body)
+        setTimeout(() => {
+            window.location.reload(true)
+        }, 1000)
     })
 
 }

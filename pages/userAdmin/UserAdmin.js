@@ -47,7 +47,7 @@ async function listAllDepartament(){
         
         ul.insertAdjacentHTML("beforeend", 
         `
-            <li>
+            <li id=${depart.uuid}>
                 <h3>${depart.name}</h3>
                 <span>${depart.description}</span>
                 <p>${depart.companies.name}</p>
@@ -236,7 +236,9 @@ async function createNewDepartament(){
             }
         })
         createDepartament(token, body)
-        
+        setTimeout(() => {
+            window.location.reload(true)
+        }, 1000)
     })	
 
 }

@@ -265,3 +265,17 @@ export async function deleteUser(token, id){
 
       return user
 }
+
+export async function sectors(){
+   const sect = await fetch(baseUrl + "/sectors", {
+  method:"GET",
+  header: {
+    "Content-Type": "application/json",
+  }
+})
+  .then(response => response.json())
+  .then(response => response)
+  .catch(err => console.error(err));
+
+  return sect
+}

@@ -82,3 +82,13 @@ async function verificationTypeUser(){
     aboutUser(token)
 
 }
+function buttonRegis(){
+    const button = document.querySelector(".btn--register")
+    button.addEventListener("click", () => {
+        setTimeout(() => {
+            window.location.replace("/pages/register/register.html")
+        }, 1000);
+    })
+}
+buttonRegis()
+
